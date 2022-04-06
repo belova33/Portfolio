@@ -1,23 +1,19 @@
 {
-  "name": "module02-shop",
+  "name": "portfolio",
   "scripts": {
-    "build": "webpack",
-    "dev": "webpack serve --env develop"
+    "build": "webpack"
   },
   "devDependencies": {
-    "css-loader": "^6.6.0",
+    "css-loader": "^6.7.1",
     "html-loader": "^3.1.0",
-    "mini-css-extract-plugin": "^2.5.3",
-    "sass": "^1.49.7",
-    "sass-loader": "^12.4.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "sass": "^1.49.11",
+    "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
-    "webpack": "^5.68.0",
-    "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.7.4"
+    "webpack": "^5.71.0",
+    "webpack-cli": "^4.9.2"
   },
   "dependencies": {
-    "html-webpack-plugin": "^5.5.0",
-    "normalize.css": "^8.0.1",
-    "swiper": "^8.0.6"
+    "html-webpack-plugin": "^5.5.0"
   }
 }
