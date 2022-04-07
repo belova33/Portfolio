@@ -38,18 +38,25 @@ body {
         position: absolute;
         height: 253px;
         width: 253px;
-        left: 25rem;
+        left: 35rem;
         top: 46rem;        
+    }
+    &__circle1 {
+        position: absolute;
+        height: 106px;
+        width: 106px;
+        right: 51.6rem;
+        top: 73.6rem;
     }
     &__triangle {
         position: absolute;        
-        left: 22.8rem;
+        left: 32.8rem;
         top: 50rem;
     }
 }
 .header {    
     margin-top: 4.5rem;    
-    margin-bottom: 6.5rem;    
+    margin-bottom: 6.2rem;    
     align-items: center;
     
     &__navigation {
@@ -150,6 +157,7 @@ body {
         gap: 3rem;
         font-size: 1.6rem;
         font-weight: 400;
+        z-index: 9;
     }
     &__link {
         text-decoration: none;
@@ -176,7 +184,7 @@ body {
     }
 }
 .line {
-    margin-top: 6rem;
+    margin-top: 5.7rem;
     margin-bottom: 4rem;
 }
 .main-skill {
@@ -201,13 +209,12 @@ body {
         
     }
 }
-.about {
-    
+.about {    
     &__box {
         display: flex;
         flex-direction: row;
         align-content: stretch;
-        justify-content: space-between;        
+        justify-content: space-between;                       
     }    
     &__title {
         display: block;
@@ -219,7 +226,69 @@ body {
         font-size: 2.8rem;
         line-height: 150%;
         margin-top: 10px;
+        margin-bottom: 0.5rem;
+    }
+    &__list {
+        margin-left: 58rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;   
+        margin-top: 4.5rem;
+        margin-bottom: 16.5rem;
+        padding-left: 0;
+    }
+    &__item {
+        list-style-type: none;
+        
+    }    
+}
+.promo {
+    &__text {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+    }
+    &__score {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 4.3rem;
+    }
+    &__figure {   
+        display: inline-flex;     
+        font-size: 2.8rem;
+        margin-top: 0;
         margin-bottom: 0;
+    }
+    &__title {
+        font-size: 2.8rem;
+        font-weight: 400;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    &__desc {
+        font-size: 1.6rem;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 36.9%;
+        position: absolute;
+    }
+    &__line {        
+        margin-top: 3.8rem;
+        margin-bottom: 4rem;        
+    }
+}
+.portfolio {
+    &__title {
+        margin-top: 21.5rem;
+    }
+    &__circle {
+        position: absolute;
+        height: 465px;
+        width: 465px;
+        right: 51.6rem;
+        top: 200.6rem;
     }
 }
 
