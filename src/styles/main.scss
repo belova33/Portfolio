@@ -18,6 +18,7 @@ html {
 }
 body {
     font-size: 1.4rem;
+    line-height: 150%;
     font-family: 'Inter', sans-serif;
     color: $grey;
     background-color: $bgc;
@@ -31,3 +32,197 @@ body {
     padding-left: 15px;
     padding-right: 15px;    
 }
+.main {
+    position: relative;
+    &__circle {
+        position: absolute;
+        height: 253px;
+        width: 253px;
+        left: 25rem;
+        top: 46rem;        
+    }
+    &__triangle {
+        position: absolute;        
+        left: 22.8rem;
+        top: 50rem;
+    }
+    &__list {
+
+    }
+}
+.header {    
+    margin-top: 4.5rem;    
+    margin-bottom: 6.5rem;    
+    align-items: center;
+    
+    &__navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__nav {
+        display: flex;        
+        align-items: center;               
+        list-style-type: none;        
+        margin: 0;
+        padding-left: 0;
+        gap: 2.8rem;
+    }
+    &__link {
+        text-decoration: none;
+        color: $grey;
+        transition: .3s;
+    }
+    &__phonemail {
+        display: flex;        
+        align-items: center;
+        gap: 2.6rem;
+    }
+    &__tel {
+        text-decoration: none;
+        color: $grey;
+        transition: .3s;        
+    }
+    &__mail {
+        text-decoration: none;
+        color: $grey;
+        transition: .3s;
+        position: relative;
+        &::before {
+            content: "";
+            background-color: $grey;
+            width: 1px;
+            height: 24px;            
+            position: absolute; 
+            left: -12px;
+            text-align: center;
+        }
+    }
+}
+.title {
+    position: relative;
+    font-family: $font-Inter;
+    font-weight: 700;
+    font-size: 7.4rem;
+    margin: 0;  
+    margin-top: 12.5rem;
+    color: $wight;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    
+    &__span {
+        display: block;
+        font-size: 2.8rem;
+        font-weight: 400;
+        margin-bottom: 7.5rem;
+        text-transform: capitalize;
+    }
+}
+.discuss {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    margin-top: 13.7rem;
+    &__desc {
+        display: flex;
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
+        gap: 16px;
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 1.5rem;
+            height: 1.1rem;
+            background-image: url(../images/Arrow.svg);
+            background-size: cover;
+            background-repeat: no-repeat; 
+            align-content: center;
+            margin-top: 5px;
+        }
+    }    
+    &__social {
+        display: flex;        
+        align-items: center;               
+        list-style-type: none;        
+        margin: 0;
+        padding-left: 0;
+        gap: 3rem;
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+    &__link {
+        text-decoration: none;
+        color: $grey;
+        transition: .3s;        
+    }
+    &__inst  {
+        &::before {
+            content: "";
+            background-color: $grey;
+            width: 1px;
+            height: 24px;            
+            text-align: center;
+        }
+    }
+    &__telegram  {
+        &::before {
+            content: "";
+            background-color: $grey;
+            width: 1px;
+            height: 24px;            
+            text-align: center;
+        }
+    }
+}
+.line {
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+}
+.main-skill {
+    display: flex;    
+    gap: 4.2rem;
+    padding-left: 0;
+    
+    &__item {
+        list-style-type: none;        
+        margin: 0;
+        padding-left: 0;
+        justify-items: left;
+    }
+    &__title {
+        font-size: 17px;
+        margin-bottom: 1rem;
+    }
+    &__desc {
+        margin-bottom: 15.5rem;
+        
+    }
+}
+.about {
+    
+    &__box {
+        display: flex;
+        flex-direction: row;
+        align-content: stretch;
+        justify-content: space-between;        
+    }    
+    &__title {
+        display: block;
+        font-size: 2.8rem;
+        letter-spacing: 0.01rem;
+        width: 191rem;
+    }
+    &__description {
+        font-size: 2.8rem;
+        line-height: 150%;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+}
+
+
+

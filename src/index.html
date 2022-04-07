@@ -8,79 +8,82 @@
 </head>
 <body>
     <div class="main">
-         <header class="header">             
-             <nav class="header__navigation">
-                 <ul class="header__nav">
-                     <li class="header__item">
-                        <a href="#" class="header__link">Обо мне</a>
-                     </li>
-                     <li class="header__item">
-                        <a href="#" class="header__link">Портфолио</a>
-                     </li>
-                     <li class="header__item">
-                        <a href="#" class="header__link">Этапы работ</a>
-                     </li>
-                     <li class="header__item">
-                        <a href="#" class="header__link">Цены</a>
-                     </li>
-                     <li class="header__item">
-                        <a href="#" class="header__link">Обратная связь</a>
-                     </li>                     
-                 </ul>
-             </nav>
-             <a href="tel:+79040346791" class="header__tel">+7 904 034-67-91</a>
-             <a href="mailto:belova33@mail.ru" class="header__mail">e-mail: belova33@mail.ru</a>             
-         </header>
-
         <div class="container">
+            <header class="header">             
+                <nav class="header__navigation">
+                    <ul class="header__nav">
+                        <li class="header__item">
+                            <a href="#" class="header__link">Обо мне</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link">Портфолио</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link">Этапы работ</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link">Цены</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link">Обратная связь</a>
+                        </li>                     
+                    </ul>
+                
+                    <div class="header__phonemail">
+                        <a href="tel:+79040346791" class="header__tel">+7 904 034-67-91</a>
+                        <a href="mailto:belova33@mail.ru" class="header__mail">belova33@mail.ru</a> 
+                    </div>
+                </nav>                             
+            </header>        
 
-             <img class="main__foto" src="images/Liubov.jpg" alt=" my foto">
-             <img class="main__circle" src="images/circle.svg" alt="circle">
-             <img class="main__triangle" src="images/triangle.svg" alt="triangle">
-               
-             
+            <img class="main__foto" src="images/Liubov.jpg" alt=" my foto">
+            <img class="main__circle" src="images/circle.svg" alt="circle">
+            <img class="main__triangle" src="images/triangle.svg" alt="triangle">                          
+            
             <h1 class="title title_block">                    
                 <span class="title__span">Любовь Белова</span>
                 web-разработчик
             </h1>
 
-            <div class="main__item">
+            <div class="discuss">
 
-                <p class="description description_size-l">
+                <p class="discuss__desc">
                     Обсудить проект
                 </p>                   
                     
-                <ul class="main__social">">
-                    <li class="main-social__item">
-                        <a href="#" target="_blank" class="main-social__link main-social__vk"></a>
+                <ul class="discuss__social">
+                    <li class="discuss__item">
+                        <a href="#" target="_blank" class="discuss__social discuss__link discuss__vk">Vk</a>
                     </li>
-                    <li class="main-social__item">
-                        <a href="#" target="_blank" class="main-social__link main-social__inst"></a>
+                    <li class="discuss__item">
+                        <a href="#" target="_blank" class="discuss__social discuss__link discuss__inst">Instagram</a>
                     </li>
-                    <li class="main-social__item">
-                        <a href="#" target="_blank" class="main-social__link main-social__telegram"></a>
+                    <li class="discuss__item">
+                        <a href="#" target="_blank" class="discuss__social discuss__link discuss__telegram">Telegram</a>
                     </li>
                 </ul>                  
             </div>
 
+            
+
             <hr class="line">
             
-            <ul class="main__list">">
-                <li class="main-text__item">
-                    <h4 class="main-text__title">FRONT-END</h4>
-                    <p class="main-text__desc">HTML+CSS+JS кодирование дизайнов любой сложности</p>
+            <ul class="main-skill">
+                <li class="main-skill__item">
+                    <h4 class="main-skill__title">FRONT-END</h4>
+                    <p class="main-skill__desc">HTML+CSS+JS кодирование дизайнов любой сложности</p>
                 </li>
-                <li class="main-text__item">
-                    <h4 class="main-text__title">BACK-END</h4>
-                    <p class="main-text__desc">Разработка сложной back-end логики для готового front-end</p>
+                <li class="main-skill__item">
+                    <h4 class="main-skill__title">BACK-END</h4>
+                    <p class="main-skill__desc">Разработка сложной back-end логики для готового front-end</p>
                 </li>
-                <li class="main-text__item">
-                    <h4 class="main-text__title">WORDPRESS</h4>
-                    <p class="main-text__desc">Разработка сайтов - от блога до интернет магазина</p>
+                <li class="main-skill__item">
+                    <h4 class="main-skill__title">WORDPRESS</h4>
+                    <p class="main-skill__desc">Разработка сайтов - от блога до интернет магазина</p>
                 </li>
-                <li class="main-text__item">
-                    <h4 class="main-text__title">SEO ПРОДВИЖЕНИЕ</h4>
-                    <p class="main-text__desc">Качественное улучшение позиций сайта в поисковой выдаче</p>
+                <li class="main-skill__item">
+                    <h4 class="main-skill__title">SEO ПРОДВИЖЕНИЕ</h4>
+                    <p class="main-skill__desc">Качественное улучшение позиций сайта в поисковой выдаче</p>
                 </li>
             </ul>  
             
@@ -90,15 +93,17 @@
 
     <section class="about">
         <div class="container">
-            <h2 class="about__title">
-                ОБО МНЕ                    
-            </h1>
-            <div class="about__text">
-                <p class="description description_size-s">
-                    Создаю только эффективные решения, которые работают на результат: от одностраничных сайтов, до крупных интернет-порталов.
+            <div class="about__box">
+                <h2 class="about__title">
+                    ОБО МНЕ                    
+                </h1>
+                <p class="about__description">
+                    Создаю только эффективные решения, которые работают на результат: от&nbsp;одностраничных сайтов, до крупных интернет-порталов.
                 </p>
+                </div>
+                <hr class="line">
             </div>
-            <hr class="line">
+                        
             <ul class="about__list">
                 <li class="about__item">
                     <h4 class="about-text__title">Контроль</h4>
@@ -148,7 +153,7 @@
     <section class="portfolio">
         <div class="container">
             <h1 class="title">Портфолио</h1>
-            <img class="main__circle" src="images/circle.svg" alt="circle">
+            <img class="portfolio__circle" src="images/circle.svg" alt="circle">
 
             <div class="portfolio__text">
                 <h2 class="portfolio__title">Agata Bielen</h2>  
@@ -398,7 +403,7 @@
 
                     <hr class="line">
 
-                    <ul class="contact__social">">
+                    <ul class="contact__social">
                         <li class="contact-social__item">
                             <a href="#" target="_blank" class="contact-social__link contact-social__vk"></a>
                         </li>
@@ -427,35 +432,35 @@
             </div>
     </section>
 
-    <footer class="footer">             
-        <nav class="footer__navigation">
-            <ul class="footer__nav">
-                <li class="footer__item">
-                   <a href="#" class="footer__link">Обо мне</a>
-                </li>
-                <li class="footerr__item">
-                   <a href="#" class="footerr__link">Портфолио</a>
-                </li>
-                <li class="footer__item">
-                   <a href="#" class="footer__link">Этапы работ</a>
-                </li>
-                <li class="footer__item">
-                   <a href="#" class="footer__link">Цены</a>
-                </li>
-                <li class="footer__item">
-                   <a href="#" class="footerr__link">Обратная связь</a>
-                </li>                     
-            </ul>
-        </nav>
-        <a href="tel:+79040346791" class="footer__tel">+7 904 034-67-91</a>
-        <a href="mailto:belova33@mail.ru" class="footer__mail">e-mail: belova33@mail.ru</a>             
-    
-
-        <div class="footer__text">
-            <p>&copy; 2020, Все права защищены</p>
-            <p>Сделано в рамках курса учебной платформы <a href="#" class="footer__author">Frontend Blok</a></p>
-        </div>
-            
+    <footer class="footer">
+        <div class="container">                     
+            <nav class="footer__navigation">
+                <ul class="footer__nav">
+                    <li class="footer__item">
+                    <a href="#" class="footer__link">Обо мне</a>
+                    </li>
+                    <li class="footerr__item">
+                    <a href="#" class="footerr__link">Портфолио</a>
+                    </li>
+                    <li class="footer__item">
+                    <a href="#" class="footer__link">Этапы работ</a>
+                    </li>
+                    <li class="footer__item">
+                    <a href="#" class="footer__link">Цены</a>
+                    </li>
+                    <li class="footer__item">
+                    <a href="#" class="footerr__link">Обратная связь</a>
+                    </li>                     
+                </ul>
+            </nav>
+            <a href="tel:+79040346791" class="footer__tel">+7 904 034-67-91</a>
+            <a href="mailto:belova33@mail.ru" class="footer__mail">e-mail: belova33@mail.ru</a>             
+        
+            <div class="footer__text">
+                <p>&copy; 2020, Все права защищены</p>
+                <p>Сделано в рамках курса учебной платформы <a href="#" class="footer__author">Frontend Blok</a></p>
+            </div>
+        </div>    
     </footer>
     
 </body>
