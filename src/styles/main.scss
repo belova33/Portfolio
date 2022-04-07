@@ -46,9 +46,6 @@ body {
         left: 22.8rem;
         top: 50rem;
     }
-    &__list {
-
-    }
 }
 .header {    
     margin-top: 4.5rem;    
@@ -184,14 +181,16 @@ body {
 }
 .main-skill {
     display: flex;    
-    gap: 4.2rem;
+    gap: 8.6rem;
     padding-left: 0;
     
+
     &__item {
         list-style-type: none;        
         margin: 0;
         padding-left: 0;
         justify-items: left;
+        
     }
     &__title {
         font-size: 17px;
