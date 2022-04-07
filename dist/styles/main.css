@@ -1,1 +1,2 @@
-body{background-color:aqua;color:#fff000}
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap);
+html{font-size:10px}@media(max-width: 500px){html{font-size:14px}}body{font-size:1.4rem;font-family:"Inter",sans-serif;color:#f3f2f0;background-color:#232326;background-size:cover;background-repeat:no-repeat;overflow-x:hidden}.container{max-width:1140px;margin:0 auto;padding-left:15px;padding-right:15px}
