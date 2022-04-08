@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 $bgc: #232326;
-$lineart: #232326;
 $grey: #F3F2F0;
 $wight: #fff;
 $red: #D40000;
@@ -190,8 +189,7 @@ body {
 .main-skill {
     display: flex;    
     gap: 8.6rem;
-    padding-left: 0;
-    
+    padding-left: 0;   
 
     &__item {
         list-style-type: none;        
@@ -246,8 +244,7 @@ body {
     &__text {
         display: flex;
         flex-direction: row;
-        align-items: center;
-        
+        align-items: center;        
     }
     &__score {
         display: flex;
@@ -271,7 +268,7 @@ body {
         font-size: 1.6rem;
         margin-top: 0;
         margin-bottom: 0;
-        margin-left: 36.9%;
+        margin-left: 27.6%;
         position: absolute;
     }
     &__line {        
@@ -282,13 +279,147 @@ body {
 .portfolio {
     &__title {
         margin-top: 21.5rem;
+        margin-bottom: 18rem;
     }
     &__circle {
         position: absolute;
         height: 465px;
         width: 465px;
-        right: 51.6rem;
-        top: 200.6rem;
+        right: 81rem;
+        top: 236rem;
+    }
+    &__gradient {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding-top: 12rem;
+        height: 871px;
+        background: linear-gradient(180deg, #141416 0%, rgba(20, 20, 22, 0) 100%);
+        background-position-x: center;
+        max-width: 100%;
+        margin: 0 auto;
+        padding-left: 0px;
+        padding-right: 0px;  
+        z-index: 11;
+        margin-bottom: 33rem;
+    }
+    &__title-h2 {        
+        margin-bottom: 0;
+        font-size: 2.8rem;
+        font-weight: 700;
+        line-height: 150%;
+    }
+    &__box {
+        display: flex;        
+        align-items: center;               
+        justify-content: space-between;
+        margin-top: -4.5rem;
+        margin-bottom: 7.5rem;
+        
+    }
+    &__second {
+        margin-top: 7rem;
+    }
+    &__list {
+        padding-left: 0;
+        margin-bottom: 4rem;
+        margin-top: 4rem;
+    }
+    &__item {
+        list-style-type: none;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 199%;
+    }
+    &__desc {
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 150%;
+    }
+    &__line {
+        margin-bottom: 6rem;
+    }
+    &__third {
+        display: block;
+        font-size: 2.8rem;
+        font-weight: 400;
+        max-width: 87rem;
+        line-height: 150%;
+        margin-top: 18rem;
+        margin-bottom: 8rem;
+    }
+}
+.deliveri {
+    margin-bottom: 12rem;
+    &__grid {
+        display: grid;
+        grid-template-columns: 34% 34% 1fr;        
+        margin-top: -1rem;
+    }  
+    &__box-grid {
+        display: flex;
+        gap: 4rem;
+        width: 350px;
+        align-items: center;
+        margin-bottom: 5.5rem;
+    }
+    &__size {
+        width: 4rem;
+        height: 4rem;
+        margin-top: 2rem;
+    }
+    &__title {
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+    &__box-desc {
+        font-size: 1.4rem;
+        font-weight: 400;        
+    }
+    &__title {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    &__box-desc {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+.tabl {
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;        
+    }
+    &__box {
+        box-sizing: border-box;
+        outline-color: 1px $grey;
+        align-self: center;
+        justify-content: center;
+
+    }
+    &__sign1 {
+        width: 68px;
+    }
+    &__sign2 {
+        width: 68px;
+    }
+    &__sign3 {
+        width: 71px;
+    }
+    &__sign4 {
+        width: 73px;
+    }
+    &__sign5 {
+        width: 71px;
+    }
+    &__sign6 {
+        width: 101px;
+    }
+    &__sign7 {
+        width: 81px;
+    }
+    &__sign8 {
+        width: 74px;
     }
 }
 
