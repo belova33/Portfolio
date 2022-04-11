@@ -7,51 +7,49 @@
     <title>Портфолио</title>
 </head>
 <body>
+
+    <header class="header">                     
+            <nav class="header__navigation">
+                <ul class="header__nav">
+                    <li class="header__item">
+                        <a href="#" class="header__link">Обо мне</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#" class="header__link">Портфолио</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#" class="header__link">Этапы работ</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#" class="header__link">Цены</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#" class="header__link">Обратная связь</a>
+                    </li>                     
+                </ul>
+                    
+                <div class="header__phonemail">
+                    <a href="tel:+79040346791" class="header__tel">+7 904 034-67-91</a>
+                    <a href="mailto:belova33@mail.ru" class="header__mail">belova33@mail.ru</a> 
+                </div> 
+            </nav>                                                    
+    </header>        
     <div class="main">
         <div class="container">
-            <header class="header">             
-                <nav class="header__navigation">
-                    <ul class="header__nav">
-                        <li class="header__item">
-                            <a href="#" class="header__link">Обо мне</a>
-                        </li>
-                        <li class="header__item">
-                            <a href="#" class="header__link">Портфолио</a>
-                        </li>
-                        <li class="header__item">
-                            <a href="#" class="header__link">Этапы работ</a>
-                        </li>
-                        <li class="header__item">
-                            <a href="#" class="header__link">Цены</a>
-                        </li>
-                        <li class="header__item">
-                            <a href="#" class="header__link">Обратная связь</a>
-                        </li>                     
-                    </ul>
-                
-                    <div class="header__phonemail">
-                        <a href="tel:+79040346791" class="header__tel">+7 904 034-67-91</a>
-                        <a href="mailto:belova33@mail.ru" class="header__mail">belova33@mail.ru</a> 
-                    </div>
-                </nav>                             
-            </header>        
-
             <img class="main__foto" src="images/Liubov.jpg" alt=" my foto">
             <img class="main__circle" src="images/circle.svg" alt="circle">
             <img class="main__circle1" src="images/circle.svg" alt="circle">
             <img class="main__triangle" src="images/triangle.svg" alt="triangle">                          
-            
+                    
             <h1 class="title title_block">                    
                 <span class="title__span">Любовь Белова</span>
                 web-разработчик
             </h1>
 
             <div class="discuss">
-
                 <p class="discuss__desc">
                     Обсудить проект
-                </p>                   
-                    
+                </p>                    
                 <ul class="discuss__social">
                     <li class="discuss__item">
                         <a href="#" target="_blank" class="discuss__social discuss__link discuss__vk">Vk</a>
@@ -66,7 +64,7 @@
             </div>           
 
             <hr class="line">
-            
+                
             <ul class="main-skill">
                 <li class="main-skill__item">
                     <h4 class="main-skill__title">FRONT-END</h4>
@@ -84,9 +82,7 @@
                     <h4 class="main-skill__title">SEO ПРОДВИЖЕНИЕ</h4>
                     <p class="main-skill__desc">Качественное улучшение позиций<br>сайта в поисковой выдаче</p>
                 </li>
-            </ul>  
-            
-            
+            </ul>            
         </div>                            
     </div>    
 
@@ -420,6 +416,7 @@
                         <li>От 2-10 страниц, корзина, карточка товара</li>
                         <li>От 20 дней</li>
                     </ul>
+                    <img class="price__circle1" src="images/circle.svg" alt="circle">
                     <p  class="price__price">От 15 000 Р</p>
                 </div>                  
 
@@ -429,49 +426,43 @@
 
     
     <section class="contact">
-            <div class="container">
-                <div class="contact-box">
-                
-                    <div class="contact-box__item">
-                        <h2 class="contact-box__title">
-                            Расскажите о своем проекте
-                        </h1> 
-                        <div class="contact-box__text">
-                            <p class="description description_size-s">
-                                Воспользуйтесь формой обратнойсвязи, чтобы обсудить ваш проект, заполните все поля, и я свяжусьс вами в ближайшее время
-                            </p>                            
-                        </div>
-                    </div>
-
-                    <hr class="line">
-
-                    <ul class="contact__social">
-                        <li class="contact-social__item">
-                            <a href="#" target="_blank" class="contact-social__link contact-social__vk"></a>
-                        </li>
-                        <li class="contact-social__item">
-                            <a href="#" target="_blank" class="contact-social__link contact-social__inst"></a>
-                        </li>
-                        <li class="contact-social__item">
-                            <a href="#" target="_blank" class="contact-social__link contact-social__telegram"></a>
-                        </li>
-                    </ul> 
-
-                    <div class="contact-box__form">
-                        <div class="card">                            
-                            <form>
-                                <label class="card__label">Телефон или почта</label>
-                                <input class="card__input" type="text" placeholder="Введите телефон">
-                                <label class="card__label">Выберите удобный способ связи</label>
-                                <input class="card__input" type="tel" placeholder="Telegram">
-                                <button type="submit" class="link card__link">Отправить</button>
-                              
-                            </form>
-                        </div>
-                    </div>
-
-                </div>                
+        <div class="container">
+            <div class="contact__box">
+                <img class="contact__triangle" src="images/triangle.svg" alt="triangle">
+                <img class="contact__circle" src="images/circle.svg" alt="circle">
+                <h2 class="contact__title">Расскажите<br>о своем проекте</h2> 
+                <p class="contact__description">
+                    Воспользуйтесь формой обратной связи, чтобы обсудить ваш проект, заполните все поля, и я свяжусь с&nbsp;вами в ближайшее время
+                </p>                            
             </div>
+
+            <hr class="contact__line">
+
+            <div class="contact__form">
+                <ul class="contact__social">
+                    <li class="contact__item">
+                        <a href="#" target="_blank" class="contact__link contact__vk">Vk</a>
+                    </li>
+                    <li class="contact__item">
+                        <a href="#" target="_blank" class="contact__link contact__inst">Instagram</a>
+                    </li>
+                    <li class="contact__item">
+                        <a href="#" target="_blank" class="contact__link contact__telegram">Telegram</a>
+                    </li>
+                </ul> 
+                
+                <div class="contact__card card">                            
+                    <form class="form">
+                        <label class="card__label">Телефон или почта</label>
+                        <input class="card__input" type="text" placeholder="Введите телефон">
+                        <label class="card__label">Выберите удобный способ связи</label>
+                        <input class="card__input" type="tel" placeholder="Telegram">
+                        <button type="submit" class="link card__link">Отправить</button>
+                    </form>
+                </div>
+
+            </div>                            
+        </div>
     </section>
 
     <footer class="footer">
