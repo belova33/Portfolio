@@ -8,7 +8,9 @@
 </head>
 <body>
 
-    <header class="header">                     
+<header class="header"> 
+    <div class="header__fixed">
+        <div class="container">
             <nav class="header__navigation">
                 <ul class="header__nav">
                     <li class="header__item">
@@ -32,8 +34,10 @@
                     <a href="tel:+79040346791" class="header__tel">+7 904 034-67-91</a>
                     <a href="mailto:belova33@mail.ru" class="header__mail">belova33@mail.ru</a> 
                 </div> 
-            </nav>                                                    
-    </header>        
+            </nav> 
+        </div>
+    </div>                                                   
+</header>        
     <div class="main">
         <div class="container">
             <img class="main__foto" src="images/Liubov.jpg" alt=" my foto">
@@ -435,45 +439,59 @@
                     Воспользуйтесь формой обратной связи, чтобы обсудить ваш проект, заполните все поля, и я свяжусь с&nbsp;вами в ближайшее время
                 </p>                            
             </div>
-
             <hr class="contact__line">
+        </div>        
+    </section>
 
-            <div class="contact__form">
-                <ul class="contact__social">
-                    <li class="contact__item">
-                        <a href="#" target="_blank" class="contact__link contact__vk">Vk</a>
+    <section class="connection">
+        <div class="container">
+            <div class="connection__box">
+                <ul class="connection__social">
+                    <li class="connection__item">
+                        <a href="#" target="_blank" class="connection__link connection__vk">Vk</a>
                     </li>
-                    <li class="contact__item">
-                        <a href="#" target="_blank" class="contact__link contact__inst">Instagram</a>
+                    <li class="connection__item">
+                        <a href="#" target="_blank" class="connection__link connection__inst">Instagram</a>
                     </li>
-                    <li class="contact__item">
-                        <a href="#" target="_blank" class="contact__link contact__telegram">Telegram</a>
+                    <li class="connection__item">
+                        <a href="#" target="_blank" class="connection__link connection__telegram">Telegram</a>
                     </li>
                 </ul> 
                 
-                <div class="contact__card card">                            
+                <div class="connection__card">                            
                     <form class="form">
                         <label class="card__label">Телефон или почта</label>
-                        <input class="card__input" type="text" placeholder="Введите телефон">
+                        <input class="input" type="text" placeholder="Введите телефон">
                         <label class="card__label">Выберите удобный способ связи</label>
-                        <input class="card__input" type="tel" placeholder="Telegram">
+
+                        <div class="select"> 
+                            <select class="select__new">
+                                <option class="select__option" value="Vk">Vk</option> 
+                                <option class="select__option" value="Instagram">Instagram</option> 
+                                <option selected class="select__option" value="Telegram">Telegram</option> 
+                                <option class="select__option" value="Odnoklassniky">Odnoklassniky</option> 
+                                <option class="select__option" value="ytub">ytub</option> 
+                            </select>
+                        </div>
                         <button type="submit" class="link card__link">Отправить</button>
                     </form>
                 </div>
-
-            </div>                            
-        </div>
+            </div> 
+            
+        </div>                             
     </section>
+    
 
     <footer class="footer">
-        <div class="container">                     
+        <div class="container"> 
+            <hr class="footer__line">                     
             <nav class="footer__navigation">
                 <ul class="footer__nav">
                     <li class="footer__item">
                     <a href="#" class="footer__link">Обо мне</a>
                     </li>
                     <li class="footerr__item">
-                    <a href="#" class="footerr__link">Портфолио</a>
+                    <a href="#" class="footer__link">Портфолио</a>
                     </li>
                     <li class="footer__item">
                     <a href="#" class="footer__link">Этапы работ</a>
@@ -482,12 +500,16 @@
                     <a href="#" class="footer__link">Цены</a>
                     </li>
                     <li class="footer__item">
-                    <a href="#" class="footerr__link">Обратная связь</a>
+                    <a href="#" class="footer__link">Обратная связь</a>
                     </li>                     
                 </ul>
+
+                <div class="footer__phonemail">
+                    <a href="tel:+79040346791" class="footer__tel">+7 904 034-67-91</a>
+                    <a href="mailto:belova33@mail.ru" class="footer__mail">belova33@mail.ru</a> 
+                </div>
             </nav>
-            <a href="tel:+79040346791" class="footer__tel">+7 904 034-67-91</a>
-            <a href="mailto:belova33@mail.ru" class="footer__mail">e-mail: belova33@mail.ru</a>             
+                         
         
             <div class="footer__text">
                 <p>&copy; 2020, Все права защищены</p>

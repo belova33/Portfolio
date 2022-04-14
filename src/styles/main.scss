@@ -26,21 +26,24 @@ body {
     overflow-x: hidden;
 }
 .header {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-
-    &__navigation {    
+    
+    &__fixed {
+        width: 100%;
         background-color: $bgc;
-        margin: 0 auto;
-        width: 1140px;
+        position: fixed;    
+        top: 0;
+        z-index: 9;
+    }
+    &__navigation {        
+        align-items: center;
+        width: 100%;    
+        background-color: $bgc;
+        margin: 0 auto;        
         display: flex; 
         justify-content: space-between;
         padding-top: 4rem;    
         padding-bottom: 4rem;        
-        position: fixed;    
-        top: 0;
-        z-index: 9;
+        
     }
     &__nav {
         list-style-type: none;
@@ -299,6 +302,7 @@ body {
         width: 465px;
         right: 81rem;
         top: 236rem;
+        z-index: -2;
     }
     &__gradient {
         width: 100%;
@@ -314,12 +318,14 @@ body {
         padding-right: 0px;  
         z-index: 11;
         margin-bottom: 33rem;
+        z-index: 3;
     }
     &__title-h2 {        
         margin-bottom: 0;
         font-size: 2.8rem;
         font-weight: 700;
         line-height: 150%;
+        z-index: 2;
     }
     &__box {
         display: flex;        
@@ -518,10 +524,7 @@ body {
         padding-left: 1.65rem;
         font-size: 1.6rem;
         font-weight: 400;
-        line-height: 190%;
-        li {
-            
-        }        
+        line-height: 190%;        
     }
     &__price {
         position: relative;
@@ -530,7 +533,6 @@ body {
         margin-top: 6rem;
         margin-bottom: 1.4rem;
         z-index: 3;
-
     }
     &__right {
         position: relative;
@@ -569,7 +571,7 @@ body {
         flex-direction: row;
         align-content: stretch;
         justify-content: space-between;
-        margin-bottom: 7rem;         
+        margin-bottom: 5rem;         
     }
     &__title {   
         display: block;     
@@ -589,9 +591,12 @@ body {
     }
     &__line {
         position: relative;
-        z-index: 7;
+        z-index: 7;                
     }
-    &__form {
+}
+.connection {
+
+    &__box {
         display: flex;
         justify-content: space-between;
     }
@@ -636,6 +641,148 @@ body {
         }        
     }
 }
+.form {
+    box-sizing: border-box;
+    width: 56rem;
+    margin-top: 5.5rem;
+    font-size: 1.2rem;
+.label {
+        margin-bottom: 3rem;  
+        font-size: 12px;
+        color: rgba(243, 242, 240, .2);        
+    }
 
+}
+.input {
+    display: block;
+    padding: 0 20px;
+    font-size: 13px;
+    font-weight: 400;    ;
+    color: rgba(243, 242, 240, .2);    
+    height: 65px;    
+    line-height: 30px;
+    background: rgba(243, 242, 240, .1);
+    margin-bottom: 16px;
+    margin-top: 10px;
+    border-width: 0;    
+}
+.select {
+    position: relative;
+    
+    &__new {
+        display: block;
+        padding: 0 20px;
+        font-size: 13px;
+        font-weight: 400;    ;
+        color: rgba(243, 242, 240, .2);    
+        height: 65px;
+        width: 56rem;
+        line-height: 30px;
+        background: rgba(243, 242, 240, .1);
+        margin-bottom: 16px;
+        margin-top: 10px;
+        border-width: 0; 
+        border-radius: 0;
+        border-style: none;
+        -webkit-appearance: none;/* Chrome */
+        -moz-appearance: none;/* Firefox */
+        appearance: none;/* убираем дефолнтные стрелочки */
+        font-family: inherit;/* наследует от родителя */ 
+        &::after {
+            display: inline-block;
+            content: "";
+            background-image: url(../images/select.svg);
+            width: 3rem;
+            height: 2rem;
+            background-size: cover;
+            background-repeat: no-repeat; 
+            align-content: center;
+        } 
+    }
+    &__option {
+        display: block;
+        padding: 0 20px;
+        font-size: 13px;
+        font-weight: 400;
+        color: rgba(243, 242, 240, .2); 
+        background: rgba(243, 242, 240, .1);
+        border-width: 1px;
+    }
+}
+.link {
+    display: block;
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: 400;
+    color: $wight;
+    height: 65px;    
+    line-height: 30px;
+    background: $red;
+    margin-bottom: 20px;
+    margin-top: 25px;
+    border-width: 0; 
+}
+.footer {
+    &__line {
+        margin-top: 10.5rem;
+    }
+    &__navigation {  
+        display: flex;
+        justify-content: space-between;  
+        background-color: $bgc;
+        margin: 0 auto;        
+        display: flex; 
+        justify-content: space-between;
+        padding-top: 6rem;    
+        padding-bottom: 2rem;        
+    }
+    &__nav {
+        list-style-type: none;
+        display: flex;
+        gap: 2.8rem;
+        align-items: center;                
+        margin: 0;
+        padding-left: 0;
+    }   
+    &__link {
+        text-decoration: none;
+        color: $grey;
+        transition: .3s;
+    }
+    &__phonemail {
+        display: flex;        
+        align-items: center;
+        gap: 2.6rem;
+    }
+    &__tel {
+        text-decoration: none;
+        color: $grey;
+        transition: .3s;        
+    }
+    &__mail {
+        text-decoration: none;
+        color: $grey;
+        transition: .3s;
+        position: relative;
+        &::before {
+            content: "";
+            background-color: $grey;
+            width: 1px;
+            height: 24px;            
+            position: absolute; 
+            left: -12px;
+            text-align: center;
+        }
+    }
+    &__text {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        font-size: 12px;
+    }
+    &__author {
+        color: $grey;
+    }
+}
 
 
