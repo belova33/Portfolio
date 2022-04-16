@@ -2,6 +2,7 @@
 
 $bgc: #232326;
 $grey: #F3F2F0;
+$grey-opacity: rgba(243, 242, 240, .8);
 $wight: #fff;
 $red: #D40000;
 
@@ -81,6 +82,7 @@ body {
             position: absolute; 
             left: -12px;
             text-align: center;
+            color: rgba(243, 242, 240, 0.5)
         }
     }
 }
@@ -185,6 +187,7 @@ body {
             width: 1px;
             height: 24px;            
             text-align: center;
+            color: rgba(243, 242, 240, 0.5)
         }
     }
     &__telegram  {
@@ -194,6 +197,7 @@ body {
             width: 1px;
             height: 24px;            
             text-align: center;
+            color: rgba(243, 242, 240, 0.5)
         }
     }
 }
@@ -219,7 +223,7 @@ body {
     }
     &__desc {
         margin-bottom: 15.5rem;
-        
+        color: $grey-opacity;
     }
 }
 .about {    
@@ -240,6 +244,7 @@ body {
         line-height: 150%;
         margin-top: 10px;
         margin-bottom: 0.5rem;
+        color: $grey-opacity;
     }
     &__list {
         margin-left: 58rem;
@@ -251,9 +256,13 @@ body {
         padding-left: 0;
     }
     &__item {
-        list-style-type: none;
-        
+        list-style-type: none;        
     }    
+}
+.about-text {
+    &__desc {
+        color: $grey-opacity;
+    }
 }
 .promo {
     &__text {
@@ -285,6 +294,7 @@ body {
         margin-bottom: 0;
         margin-left: 27.6%;
         position: absolute;
+        color: $grey-opacity;
     }
     &__line {        
         margin-top: 3.8rem;
@@ -351,11 +361,13 @@ body {
         font-size: 1.6rem;
         font-weight: 400;
         line-height: 199%;
+        color: $grey-opacity;
     }
     &__desc {
         font-size: 1.6rem;
         font-weight: 700;
         line-height: 150%;
+        color: $grey-opacity;
     }
     &__line {
         margin-bottom: 6rem;
@@ -395,7 +407,8 @@ body {
     }
     &__box-desc {
         font-size: 1.4rem;
-        font-weight: 400;        
+        font-weight: 400; 
+        color: $grey-opacity;       
     }
     &__title {
         margin-top: 2rem;
@@ -430,8 +443,7 @@ body {
         }
     }
     &__image1 {
-        width: 68px;
-        
+        width: 68px;        
     }
     &__image2 {
         width: 68px;
@@ -521,13 +533,14 @@ body {
     &__desc-s {
         font-size: 1.6rem;
         font-weight: 400;
-
+        color: $grey-opacity;
     }
     &__list {
         padding-left: 1.65rem;
         font-size: 1.6rem;
         font-weight: 400;
-        line-height: 190%;        
+        line-height: 190%; 
+        color: $grey-opacity;       
     }
     &__price {
         position: relative;
@@ -627,6 +640,7 @@ body {
             width: 1px;
             height: 24px;            
             text-align: center;
+            color: rgba(243, 242, 240, 0.5)
         }
     }
     &__telegram  {
@@ -636,21 +650,19 @@ body {
             width: 1px;
             height: 24px;            
             text-align: center;
+            color: rgba(243, 242, 240, 0.5)
         }
     }
-
-    &__card {
-        .form {
-            display: flex;
-            flex-direction: column;
-        }        
-    }
+    
 }
 .form {
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
     width: 56rem;
     margin-top: 5.5rem;
     font-size: 1.2rem;
+    color: $grey-opacity;
 .label {
         margin-bottom: 3rem;  
         font-size: 12px;
@@ -709,11 +721,9 @@ body {
         border-width: 1px;
     }
 }
-
 .select::-ms-expand {
     display: none;
 }
-
 .select:not([multiple]) {
     padding-right: 1.2em;
     background-repeat: no-repeat;
@@ -722,10 +732,8 @@ body {
     background-image: url(../images/select.svg);
 }
 .select:focus {
-    outline: 0.15em solid #00f;
-    box-shadow: 0 0 0.2em #00f;
-  }
-
+    outline: none;
+}
 .link {
     display: block;
     padding: 0 20px;
@@ -765,9 +773,7 @@ body {
         text-decoration: none;
         color: $grey;
         transition: .3s;
-    }
-    
-    
+    }       
     &__phonemail {
         display: flex;        
         align-items: center;
@@ -791,6 +797,7 @@ body {
             position: absolute; 
             left: -12px;
             text-align: center;
+            color: rgba(243, 242, 240, 0.5)
         }
     }
     &__text {
@@ -798,9 +805,10 @@ body {
         justify-content: space-between;
         text-align: center;
         font-size: 12px;
+        color: rgba(243, 242, 240, .3);
     }
     &__author {
-        color: $grey;
+        color: rgba(243, 242, 240, .3);
     }
 }
 
