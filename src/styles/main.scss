@@ -12,6 +12,7 @@ $r_320: 320px;
 $r_360: 360px;
 $r_500: 500px;
 $r_600: 600px;
+$r_800: 800px;
 $r_900: 900px;
 $r_1000: 1000px;
 $r_1100: 1100px;
@@ -39,21 +40,18 @@ body {
         position: fixed; 
         left: 0;   
         top: 0;
-        padding: 0;
-        
+        padding: 0;        
         z-index: 9;
     }
     &__navigation {        
         align-items: center;
-        width: 100%;    
+        max-width: 1140px;
         background-color: $bgc;
         margin: 0 auto; 
         margin-right: 0;       
         display: flex; 
-        justify-content: space-between;
-        padding-top: 4rem;    
-        padding-bottom: 4rem;
-        padding: 4rem 0;        
+        justify-content: space-between;        
+        padding: 4rem 1.5rem;        
     }
     &__nav {
         list-style-type: none;
@@ -77,7 +75,7 @@ body {
         gap: 2.6rem;
         @media (max-width: $r_1000) {
             display: none;
-        }
+        }        
     }    
     &__tel {
         text-decoration: none;
@@ -108,6 +106,22 @@ body {
             color: rgba(243, 242, 240, 0.5);
         }
     }
+    &__burger {
+        display: none;
+        width: 26px;
+        height: 20px;
+        background-image: url(../images/burger.svg);
+        background-size: contain;
+        background-repeat: no-repeat; 
+        align-content: center;        
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        @media (max-width: $r_1000) {
+            display: block;
+            
+        }
+    }
 }
 .container {
     max-width: 1140px;
@@ -118,22 +132,7 @@ body {
         max-width: 1000px;
     }   
 }
-.burger {
-    display: none;
-    width: 26px;
-    height: 20px;
-    background-image: url(../images/burger.svg);
-    background-size: cover;
-    background-repeat: no-repeat; 
-    align-content: center;
-    background-size: contain;
-    background-color: transparent;
-    border: none;
-    @media (max-width: $r_1000) {
-        display: block;
-        padding-right: 15px;
-    }
-}
+
 .main {
     position: relative;
     &__foto {
@@ -150,20 +149,38 @@ body {
         position: absolute;
         height: 253px;
         width: 253px;
-        left: 35rem;
-        top: 46rem;        
+        left: 5rem;
+        top: 48rem; 
+        @media (max-width: $r_1000) {
+            left: -15rem;;
+        }       
     }
     &__circle1 {
         position: absolute;
         height: 106px;
         width: 106px;
-        right: 51.6rem;
-        top: 73.6rem;
+        right: 41rem;
+        top: 75.6rem;
+        @media (max-width: $r_1000) {
+            right: 2.6rem;
+            top: 70.6rem;
+        }
     }
     &__triangle {
         position: absolute;        
-        left: 32.8rem;
-        top: 50rem;
+        left: 22.8rem;
+        top: 52rem;
+        @media (max-width: $r_1000) {
+            left: 1.8rem;
+            top: 65rem;
+        }
+        @media (max-width: $r_900) {                        
+            left: 14.8rem;
+            top: 61rem;
+        } 
+        @media (max-width: $r_800) {
+            left: 30rem;
+        }
     }
 }
 .title {
@@ -176,6 +193,12 @@ body {
     color: $wight;
     text-transform: uppercase;
     letter-spacing: 0.25rem;
+    @media (max-width: $r_900) {                        
+        font-size: 6.4rem;
+    } 
+    @media (max-width: $r_800) {
+        margin-top: 7.5rem;
+    }
     
     &__span {
         display: block;
@@ -183,6 +206,9 @@ body {
         font-weight: 400;
         margin-bottom: 7.5rem;
         text-transform: capitalize;
+        @media (max-width: $r_900) {                        
+            font-size: 2.4rem;
+        }  
     }
 }
 .discuss {
@@ -259,18 +285,23 @@ body {
 .main-skill {
     display: flex;    
     gap: 8.6rem;
-    padding-left: 0;   
+    padding-left: 0;  
+    @media (max-width: $r_800) {
+        gap: 4.6rem;
+    } 
 
     &__item {
         list-style-type: none;        
         margin: 0;
         padding-left: 0;
-        justify-items: left;
-        
+        justify-items: left;        
     }
     &__title {
         font-size: 17px;
         margin-bottom: 1rem;
+        @media (max-width: $r_800) {
+            font-size: 1.5rem;
+        }
     }
     &__desc {
         margin-bottom: 15.5rem;
@@ -289,6 +320,12 @@ body {
         font-size: 2.8rem;
         letter-spacing: 0.01rem;
         width: 191rem;
+        @media (max-width: $r_1000) {
+            width: 130rem;
+        }  
+        @media (max-width: $r_900) {                        
+            width: 66rem;
+        } 
     }
     &__description {
         font-size: 2.8rem;
@@ -305,6 +342,15 @@ body {
         margin-top: 4.5rem;
         margin-bottom: 16.5rem;
         padding-left: 0;
+        @media (max-width: $r_1000) {
+            margin-left: 39.4rem;
+        }
+        @media (max-width: $r_900) {                        
+            margin-left: 22.4rem;
+        } 
+        @media (max-width: $r_800) {
+            margin-left: 20.4rem;
+        }
     }
     &__item {
         list-style-type: none;        
@@ -319,13 +365,22 @@ body {
     &__text {
         display: flex;
         flex-direction: row;
-        align-items: center;        
+        align-items: center;
+        @media (max-width: $r_1000) {
+            align-items: flex-start;
+        }          
     }
     &__score {
         display: flex;
         flex-direction: row;
         align-items: center;
         gap: 4.3rem;
+        width: 35rem;
+        @media (max-width: $r_1000) {
+            width: 35rem;
+            line-height: 220%;
+            align-items: flex-start;
+        }  
     }
     &__figure {   
         display: inline-flex;     
@@ -346,6 +401,9 @@ body {
         margin-left: 27.6%;
         position: absolute;
         color: $grey-opacity;
+        @media (max-width: $r_1000) {                        
+            margin-left: 51%;
+        }  
     }
     &__line {        
         margin-top: 3.8rem;
@@ -362,8 +420,8 @@ body {
         position: absolute;
         height: 465px;
         width: 465px;
-        right: 81rem;
-        top: 236rem;
+        right: 71rem;
+        top: 235rem;
         z-index: 4;
     }
     &__gradient {
@@ -398,6 +456,16 @@ body {
     }
     &__proect1 {
         z-index: 4;
+        @media (max-width: $r_800) {
+            width: 55%;
+            height: 210px;
+        }
+    }
+    &__proect2 {        
+        @media (max-width: $r_800) {
+            width: 55%;
+            height: 210px;
+        }
     }
     &__second {
         margin-top: 7rem;
@@ -413,12 +481,18 @@ body {
         font-weight: 400;
         line-height: 199%;
         color: $grey-opacity;
+        @media (max-width: $r_900) {                        
+            font-size: 1.2rem;
+        } 
     }
     &__desc {
         font-size: 1.6rem;
         font-weight: 700;
         line-height: 150%;
         color: $grey-opacity;
+        @media (max-width: $r_900) {                        
+            font-size: 1.3rem;
+        } 
     }
     &__line {
         margin-bottom: 6rem;
@@ -446,6 +520,12 @@ body {
         width: 350px;
         align-items: center;
         margin-bottom: 5.5rem;
+        @media (max-width: $r_1000) {                        
+            width: 260px;
+        }
+        @media (max-width: $r_900) {                        
+            gap: 2rem;
+        } 
     }
     &__size {
         width: 4rem;
@@ -473,14 +553,23 @@ body {
 .tabl-grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;        
-    
+        @media (max-width: $r_800) { 
+            grid-template-columns: 1fr 1fr 1fr;                        
+            width: auto;
+        }
     &__box {
         border: 1px solid rgba($grey, 1); 
         position: relative;
         width: 285px;
         height: 148px;
         box-sizing: border-box;
-        transition: .3s;        
+        transition: .3s; 
+        @media (max-width: $r_1000) {                        
+            width: auto;
+        }
+        @media (max-width: $r_900) {                        
+            width: auto;
+        }          
     }
     &__cover {
         position: absolute;
@@ -543,6 +632,12 @@ body {
         letter-spacing: 0.01rem;
         width: 196rem;
         z-index: 1;
+        @media (max-width: $r_1000) {                        
+            width: 130rem;
+        }  
+        @media (max-width: $r_900) {                        
+            width: 66rem;;
+        } 
     }
     &__description {
         font-size: 2.8rem;
@@ -649,6 +744,9 @@ body {
         width: 188rem;
         z-index: 1;
         text-transform: uppercase;
+        @media (max-width: $r_1000) {                        
+            width: 130rem;
+        }  
     }
     &__description {
         font-size: 2.8rem;
@@ -718,6 +816,9 @@ body {
     margin-top: 5.5rem;
     font-size: 1.2rem;
     color: $grey-opacity;
+    @media (max-width: $r_900) {                        
+        width: 50rem;
+    } 
 .label {
         margin-bottom: 3rem;  
         font-size: 12px;
@@ -743,6 +844,7 @@ body {
     font-size: inherit;
     letter-spacing: inherit;
     word-spacing: inherit;
+    
 
     &__new {
         display: block;
@@ -763,7 +865,9 @@ body {
         -moz-appearance: none;/* Firefox */
         appearance: none;/* убираем дефолнтные стрелочки */
         font-family: inherit;/* наследует от родителя */ 
-        
+        @media (max-width: $r_900) {                        
+            width: 50rem;
+        } 
     }
     &__option {
         list-style: none;
@@ -883,5 +987,133 @@ body {
         color: rgba(243, 242, 240, .3);
     }
 }
+.modal {
+    max-width: 360px;
+    height: 618px;
+    background-color: $bgc;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    margin: 20px auto 0;
+    transition: 0.5s;
+    padding: 29px 10px;
+    box-sizing: border-box;
+    flex-direction: column;
+    z-index: 100;
+    &__burger-close {
+        display: block;
+        right: 0;
+        width: 20px;
+        height: 20px;
+        background-image: url(../images/close.svg);
+        background-size: contain;
+        background-repeat: no-repeat; 
+        align-content: center;
+        background-size: contain;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;        
+        position: absolute;
+        top: 20px;
+        right: 10px;    
+    }
+    &__nav {
+        list-style-type: none;
+        padding-left: 0px;
+        margin-top: 40px;
+        
+    }
+    &__link {   
+        display: flex;
+        width: 340px;
+        height: 78px;
+        font-weight: 400;
+        font-size: 26px;        
+        color: #F3F2F0;        
+        text-decoration: none;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 0.7px solid rgba(243, 242, 240, 0.5);
+        border-top: 0.7px solid rgba(243, 242, 240, 0.5);        
+    }
+    
+    &__social {
+        display: flex;
+        gap: 1rem;
+        text-decoration: none;
+        color: $grey;
+        transition: .3s;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;  
+        list-style: none;  
+        padding-left: 0;
+        margin-top: 1rem;    
+        &:hover {
+            color: $red;
+            transition: .3s; 
+        }
+    }    
+    &__github  {
+        &::before {
+            content: "";
+            background-color: $grey;
+            width: 1px;
+            height: 15px;            
+            text-align: center;
+            color: rgba(243, 242, 240, 0.5);
+        }
+    }
+    &__telegram  {
+        &::before {
+            content: "";
+            background-color: $grey;
+            width: 1px;
+            height: 15px;            
+            text-align: center;
+            color: rgba(243, 242, 240, 0.5);
+        }
+    }   
+    &__phonemail {
+        display: flex;        
+        align-items: center;
+        gap: 2.6rem;
+        justify-content: center;
+        margin-top: 4rem; 
+    }
+    &__tel {
+        text-decoration: none;
+        color: $grey;
+        transition: .3s;   
+        &:hover {
+            color: $red;
+            transition: .3s; 
+        }     
+    }
+    &__mail {
+        text-decoration: none;
+        color: $grey;
+        transition: .3s;
+        position: relative;
+        &:hover {
+            color: $red;
+            transition: .3s; 
+        }
+        &::before {
+            content: "";
+            background-color: $grey;
+            width: 1px;
+            height: 24px;            
+            position: absolute; 
+            left: -12px;
+            text-align: center;
+            color: rgba(243, 242, 240, 0.5);
+        }
+    }
+}
+
+
+
 
 
