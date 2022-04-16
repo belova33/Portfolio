@@ -8,13 +8,17 @@ $red: #D40000;
 
 $font-Inter: 'Inter', sans-serif;
 
-$r_mob_500: 500px;
+$r_320: 320px;
+$r_360: 360px;
+$r_500: 500px;
+$r_600: 600px;
+$r_900: 900px;
+$r_1000: 1000px;
+$r_1100: 1100px;
 
 html {
     font-size: 10px;
-    @media (max-width: $r_mob_500) {
-        font-size: 14px;
-    }
+    
 }
 body {
     font-size: 1.4rem;
@@ -26,54 +30,73 @@ body {
     background-repeat: no-repeat;
     overflow-x: hidden;
 }
+
 .header {
     
     &__fixed {
         width: 100%;
         background-color: $bgc;
-        position: fixed;    
+        position: fixed; 
+        left: 0;   
         top: 0;
+        padding: 0;
+        
         z-index: 9;
     }
     &__navigation {        
         align-items: center;
         width: 100%;    
         background-color: $bgc;
-        margin: 0 auto;        
+        margin: 0 auto; 
+        margin-right: 0;       
         display: flex; 
         justify-content: space-between;
         padding-top: 4rem;    
-        padding-bottom: 4rem;        
-        
+        padding-bottom: 4rem;
+        padding: 4rem 0;        
     }
     &__nav {
         list-style-type: none;
         display: flex;
         gap: 2.8rem;
-        align-items: center;                
-        margin: 0;
+        align-items: center;
         padding-left: 0;
     }   
     &__link {
         text-decoration: none;
         color: $grey;
         transition: .3s;
+        &:hover {
+            color: $red;
+            transition: .3s; 
+        }
     }
     &__phonemail {
         display: flex;        
         align-items: center;
         gap: 2.6rem;
-    }
+        @media (max-width: $r_1000) {
+            display: none;
+        }
+    }    
     &__tel {
         text-decoration: none;
         color: $grey;
-        transition: .3s;        
+        transition: .3s;  
+        &:hover {
+            color: $red;
+            transition: .3s; 
+        }      
     }
     &__mail {
         text-decoration: none;
         color: $grey;
         transition: .3s;
         position: relative;
+        &:hover {
+            color: $red;
+            transition: .3s; 
+        }
         &::before {
             content: "";
             background-color: $grey;
@@ -90,14 +113,38 @@ body {
     max-width: 1140px;
     margin: 0 auto;
     padding-left: 15px;
-    padding-right: 15px;    
+    padding-right: 15px; 
+    @media (max-width: $r_1000) {
+        max-width: 1000px;
+    }   
+}
+.burger {
+    display: none;
+    width: 26px;
+    height: 20px;
+    background-image: url(../images/burger.svg);
+    background-size: cover;
+    background-repeat: no-repeat; 
+    align-content: center;
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+    @media (max-width: $r_1000) {
+        display: block;
+        padding-right: 15px;
+    }
 }
 .main {
     position: relative;
     &__foto {
         margin-top: 10.4rem;
+        object-fit: cover;
+        height: auto;
+        width: 100%;        
         max-width: 1140px;
-
+        @media (max-width: $r_1000) {
+            max-width: 970px;
+        }
     }
     &__circle {
         position: absolute;
@@ -178,7 +225,11 @@ body {
     &__link {
         text-decoration: none;
         color: $grey;
-        transition: .3s;        
+        transition: .3s;
+        &:hover {
+            color: $red;
+            transition: .3s; 
+        }        
     }
     &__github  {
         &::before {
@@ -631,7 +682,11 @@ body {
     &__link {
         text-decoration: none;
         color: $grey;
-        transition: .3s;        
+        transition: .3s;  
+        &:hover {
+            color: $red;
+            transition: .3s; 
+        }      
     }
     &__github  {
         &::before {
@@ -719,6 +774,11 @@ body {
         color: $grey; 
         background: $bgc;
         border-width: 1px;
+        transition: .3s;
+        &:hover {
+            font-weight: 700;
+            transition: .3s; 
+        }
     }
 }
 .select::-ms-expand {
@@ -773,6 +833,10 @@ body {
         text-decoration: none;
         color: $grey;
         transition: .3s;
+        &:hover {
+            color: $red;
+            transition: .3s; 
+        }
     }       
     &__phonemail {
         display: flex;        
@@ -782,13 +846,21 @@ body {
     &__tel {
         text-decoration: none;
         color: $grey;
-        transition: .3s;        
+        transition: .3s;   
+        &:hover {
+            color: $red;
+            transition: .3s; 
+        }     
     }
     &__mail {
         text-decoration: none;
         color: $grey;
         transition: .3s;
         position: relative;
+        &:hover {
+            color: $red;
+            transition: .3s; 
+        }
         &::before {
             content: "";
             background-color: $grey;
