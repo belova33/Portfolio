@@ -9,7 +9,7 @@ $red: #D40000;
 $font-Inter: 'Inter', sans-serif;
 
 $r_320: 320px;
-$r_360: 360px;
+$r_400: 400px;
 $r_500: 500px;
 $r_600: 600px;
 $r_800: 800px;
@@ -30,6 +30,8 @@ body {
     background-size: cover;    
     background-repeat: no-repeat;
     overflow-x: hidden;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .header {
@@ -51,7 +53,7 @@ body {
         margin-right: 0;       
         display: flex; 
         justify-content: space-between;        
-        padding: 4rem 1.5rem;        
+        padding: 4rem 0rem;               
     }
     &__nav {
         list-style-type: none;
@@ -59,6 +61,9 @@ body {
         gap: 2.8rem;
         align-items: center;
         padding-left: 0;
+        @media (max-width: $r_600) {
+            display: none;
+        }
     }   
     &__link {
         text-decoration: none;
@@ -76,7 +81,13 @@ body {
         @media (max-width: $r_1000) {
             display: none;
         }        
-    }    
+    }  
+    &__phonemail-mob {
+        display: none;
+        @media (max-width: $r_600) {
+            display: block;
+        }    
+    } 
     &__tel {
         text-decoration: none;
         color: $grey;
@@ -128,8 +139,9 @@ body {
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px; 
-    @media (max-width: $r_1000) {
-        max-width: 1000px;
+    @media (max-width: $r_400) {
+        padding-left: 10px;
+        padding-right: 10px;
     }   
 }
 
@@ -144,32 +156,55 @@ body {
         @media (max-width: $r_1000) {
             max-width: 970px;
         }
+        @media (max-width: $r_900) {
+            height: 215px;
+            width: 100%;
+            overflow: hidden;
+        }  
+        @media (max-width: $r_400) {
+            margin-top: 9rem;
+        }  
     }
     &__circle {
         position: absolute;
         height: 253px;
         width: 253px;
-        left: 5rem;
-        top: 48rem; 
-        @media (max-width: $r_1000) {
-            left: -15rem;;
-        }       
+        left: -13rem;
+        top: -6rem;
+        z-index: -2;
+        @media (max-width: $r_400) {
+            height: 135px;
+            width: 135px;
+            left: -5.5rem;
+            top: -3rem;
+        } 
     }
     &__circle1 {
         position: absolute;
         height: 106px;
         width: 106px;
-        right: 41rem;
+        right: 22%;
         top: 75.6rem;
+        z-index: -2;
+        @media (max-width: $r_1100) {
+            right: 2.6rem;
+            top: 72.6rem;
+        }
         @media (max-width: $r_1000) {
             right: 2.6rem;
             top: 70.6rem;
         }
+        @media (max-width: $r_400) {
+            height: 60px;
+            width: 60px;
+            right: 3.8rem;
+            top: 52rem;
+        }
     }
     &__triangle {
         position: absolute;        
-        left: 22.8rem;
-        top: 52rem;
+        left: -15rem;
+        top: -2.5rem;
         @media (max-width: $r_1000) {
             left: 1.8rem;
             top: 65rem;
@@ -180,6 +215,19 @@ body {
         } 
         @media (max-width: $r_800) {
             left: 30rem;
+        }
+        @media (max-width: $r_400) {
+            height: 33px;
+            width: auto;
+            left: 0rem;
+            top: 9.5rem;
+        } 
+    }
+    &__line {
+    
+        @media (max-width: $r_400) {
+            margin-top: 4rem;
+            margin-bottom: 2.2rem;
         }
     }
 }
@@ -193,12 +241,18 @@ body {
     color: $wight;
     text-transform: uppercase;
     letter-spacing: 0.25rem;
+    z-index: 1;
     @media (max-width: $r_900) {                        
         font-size: 6.4rem;
     } 
     @media (max-width: $r_800) {
         margin-top: 7.5rem;
     }
+    @media (max-width: $r_400) {
+        font-size: 2.8rem;
+        margin-top: 6rem;
+        letter-spacing: 0.1rem;
+    } 
     
     &__span {
         display: block;
@@ -208,7 +262,11 @@ body {
         text-transform: capitalize;
         @media (max-width: $r_900) {                        
             font-size: 2.4rem;
-        }  
+        }
+        @media (max-width: $r_400) {
+            font-size: 1.8rem;
+            margin-bottom: 3rem;
+        } 
     }
 }
 .discuss {
@@ -217,6 +275,9 @@ body {
     justify-content: space-between;
     font-size: 1.4rem;
     margin-top: 13.7rem;
+    @media (max-width: $r_400) {
+        margin-top: 10rem;
+    } 
     &__desc {
         display: flex;
         font-size: 1.6rem;
@@ -236,6 +297,10 @@ body {
             align-content: center;
             margin-top: 5px;
         }
+        @media (max-width: $r_400) {
+            font-size: 1.2rem;
+        } 
+        
     }    
     &__social {
         display: flex;        
@@ -247,6 +312,10 @@ body {
         font-size: 1.6rem;
         font-weight: 400;
         z-index: 9;
+        @media (max-width: $r_400) {
+            font-size: 1.2rem;
+            gap: 1rem;
+        } 
     }
     &__link {
         text-decoration: none;
@@ -289,6 +358,12 @@ body {
     @media (max-width: $r_800) {
         gap: 4.6rem;
     } 
+    @media (max-width: $r_400) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+        margin-bottom: 6rem;
+    } 
 
     &__item {
         list-style-type: none;        
@@ -302,10 +377,18 @@ body {
         @media (max-width: $r_800) {
             font-size: 1.5rem;
         }
+        @media (max-width: $r_400) {
+            font-size: 1.2rem;
+        }
     }
     &__desc {
         margin-bottom: 15.5rem;
         color: $grey-opacity;
+        @media (max-width: $r_400) {
+            font-size: 0.95rem;
+            line-height: 150%;
+            margin-bottom: 1rem;
+        }
     }
 }
 .about {    
@@ -313,7 +396,10 @@ body {
         display: flex;
         flex-direction: row;
         align-content: stretch;
-        justify-content: space-between;                       
+        justify-content: space-between; 
+        @media (max-width: $r_400) {
+            flex-direction: column;
+        }                      
     }    
     &__title {
         display: block;
@@ -326,6 +412,9 @@ body {
         @media (max-width: $r_900) {                        
             width: 66rem;
         } 
+        @media (max-width: $r_400) {                        
+            font-size: 1.6rem;
+        } 
     }
     &__description {
         font-size: 2.8rem;
@@ -333,6 +422,9 @@ body {
         margin-top: 10px;
         margin-bottom: 0.5rem;
         color: $grey-opacity;
+        @media (max-width: $r_400) {                        
+            font-size: 1.6rem;
+        } 
     }
     &__list {
         margin-left: 58rem;
@@ -342,6 +434,9 @@ body {
         margin-top: 4.5rem;
         margin-bottom: 16.5rem;
         padding-left: 0;
+        @media (max-width: $r_1100) {
+            margin-left: 53rem;;
+        }
         @media (max-width: $r_1000) {
             margin-left: 39.4rem;
         }
@@ -351,17 +446,44 @@ body {
         @media (max-width: $r_800) {
             margin-left: 20.4rem;
         }
+        @media (max-width: $r_400) {
+            margin-left: 0;
+            font-size: 1.2rem;
+            margin-top: 0rem;
+            margin-bottom: 4rem;
+            gap: 1rem;            
+        }
     }
     &__item {
-        list-style-type: none;        
-    }    
+        list-style-type: none;
+        @media (max-width: $r_400) {
+            width: 160px;
+        }        
+    }   
+    &__line {        
+        margin-top: 3.7rem;
+        margin-bottom: 3.5rem;
+    } 
 }
 .about-text {
+    &__title {
+        @media (max-width: $r_400) {
+            margin-top: 0;
+        }
+    }
     &__desc {
         color: $grey-opacity;
+        @media (max-width: $r_400) {
+            font-size: 1rem;
+            line-height: 150%;
+            margin-top: 0;
+            margin-bottom: 1.7rem;
+        }
     }
 }
 .promo {
+    position: relative;
+    z-index: 7;
     &__text {
         display: flex;
         flex-direction: row;
@@ -375,39 +497,70 @@ body {
         flex-direction: row;
         align-items: center;
         gap: 4.3rem;
-        width: 35rem;
-        @media (max-width: $r_1000) {
+        width: 60rem;
+        @media (max-width: $r_1100) {
             width: 35rem;
             line-height: 220%;
             align-items: flex-start;
         }  
+        @media (max-width: $r_1100) {
+            width: 35rem;            
+        } 
+        @media (max-width: $r_400) {
+            display: none;
+        }
+    }
+    &__score-mob {
+        display: none;
+        @media (max-width: $r_400) {
+            display: block;
+            gap: 1.6rem; 
+            width: 160px;           
+        } 
+
     }
     &__figure {   
         display: inline-flex;     
         font-size: 2.8rem;
         margin-top: 0;
         margin-bottom: 0;
+        @media (max-width: $r_400) {
+            font-size: 1.6rem;            
+        } 
     }
     &__title {
         font-size: 2.8rem;
         font-weight: 400;
         margin-top: 0;
         margin-bottom: 0;
+        @media (max-width: $r_400) {
+            font-size: 1.6rem;
+            line-height: 150%;            
+        } 
     }
     &__desc {
         font-size: 1.6rem;
         margin-top: 0;
         margin-bottom: 0;
-        margin-left: 27.6%;
+        margin-left: 30%;
         position: absolute;
         color: $grey-opacity;
-        @media (max-width: $r_1000) {                        
-            margin-left: 51%;
+        @media (max-width: $r_1100) {                        
+            margin-left: 50%;
         }  
+        @media (max-width: 400px) {
+            margin-left: 47%;
+            font-size: 1.2rem;
+        }
+
     }
     &__line {        
         margin-top: 3.8rem;
-        margin-bottom: 4rem;        
+        margin-bottom: 4rem;  
+        @media (max-width: 400px) {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }      
     }
 }
 .portfolio {
@@ -415,14 +568,38 @@ body {
         margin-top: 21.5rem;
         margin-bottom: 18rem;
         z-index: 6;
+        @media (max-width: $r_1100) {                        
+            margin-bottom: 12rem;
+        } 
+        @media (max-width: $r_400) {                        
+            margin-top: 7.5rem;
+            margin-bottom: 8rem;
+        } 
     }
     &__circle {
         position: absolute;
         height: 465px;
         width: 465px;
         right: 71rem;
-        top: 235rem;
+        top: 234rem;
         z-index: 4;
+        @media (max-width: $r_1100) {                        
+            margin-bottom: 12rem;
+            height: 365px;
+            width: 365px;
+            right: 71rem;
+            top: 252rem;
+            @media (max-width: $r_1000) {         
+                right: 71rem;
+                top: 242rem;
+            } 
+            @media (max-width: $r_400) {    
+                height: 197px;
+                width: 197px;     
+                right: 1rem;
+                top: 168rem;
+            } 
+        } 
     }
     &__gradient {
         width: 100%;
@@ -439,20 +616,31 @@ body {
         z-index: 11;
         margin-bottom: 33rem;
         z-index: 3;
+        @media (max-width: $r_400) {    
+            padding-top: 6rem;
+        } 
     }
-    &__title-h2 {        
+    &__title-h2 {
+        position: relative; 
         margin-bottom: 0;
         font-size: 2.8rem;
         font-weight: 700;
         line-height: 150%;
         z-index: 5;
+        @media (max-width: $r_400) {
+            font-size: 1.6rem;
+            margin-top: 3rem;
+        }
     }
     &__box {
         display: flex;        
         align-items: center;               
         justify-content: space-between;
         margin-top: -4.5rem;
-        margin-bottom: 7.5rem;        
+        margin-bottom: 7.5rem;    
+        @media (max-width: $r_400) {
+            flex-direction: column;            
+        }
     }
     &__proect1 {
         z-index: 4;
@@ -460,12 +648,23 @@ body {
             width: 55%;
             height: 210px;
         }
+        @media (max-width: $r_400) {
+            width: 100%;
+            height: auto;
+        }
     }
     &__proect2 {        
         @media (max-width: $r_800) {
             width: 55%;
             height: 210px;
         }
+        @media (max-width: $r_400) {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__text {
+        width: 100%;
     }
     &__second {
         margin-top: 7rem;
@@ -474,6 +673,10 @@ body {
         padding-left: 0;
         margin-bottom: 4rem;
         margin-top: 4rem;
+        @media (max-width: $r_400) {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
     }
     &__item {
         list-style-type: none;
@@ -490,12 +693,16 @@ body {
         font-weight: 700;
         line-height: 150%;
         color: $grey-opacity;
-        @media (max-width: $r_900) {                        
+        @media (max-width: $r_1000) {                        
             font-size: 1.3rem;
         } 
+        @media (max-width: $r_400) {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+        }
     }
     &__line {
-        margin-bottom: 6rem;
+        margin-bottom: -7rem;
     }
     &__third {
         display: block;
@@ -505,14 +712,25 @@ body {
         line-height: 150%;
         margin-top: 18rem;
         margin-bottom: 8rem;
+        @media (max-width: $r_400) {
+            margin-top: 15rem;
+            font-size: 1.6rem;
+        }
     }
 }
 .deliveri {
     margin-bottom: 12rem;
+    @media (max-width: $r_400) {
+        margin-bottom: 3.5rem;
+    }
     &__grid {
         display: grid;
         grid-template-columns: 34% 34% 1fr;        
         margin-top: -1rem;
+        @media (max-width: $r_400) {
+            display: flex;
+            flex-direction: column;
+        }
     }  
     &__box-grid {
         display: flex;
@@ -520,47 +738,59 @@ body {
         width: 350px;
         align-items: center;
         margin-bottom: 5.5rem;
-        @media (max-width: $r_1000) {                        
+
+        @media (max-width: $r_1100) {                        
             width: 260px;
+            gap: 2.5rem;
         }
         @media (max-width: $r_900) {                        
             gap: 2rem;
         } 
+        @media (max-width: $r_400) {                        
+            gap: 4rem;
+            margin-bottom: 2.3rem;
+            width: 100%;
+        }
     }
     &__size {
         width: 4rem;
         height: 4rem;
         margin-top: 2rem;
+        @media (max-width: $r_400) {                        
+            width: 3rem;
+            height: 3rem;
+            margin-top: 0;
+        } 
     }
     &__title {
         font-size: 1.6rem;
         font-weight: 700;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        @media (max-width: $r_400) {
+            font-size: 1.2rem;
+            margin-top: 0;
+        }
     }
     &__box-desc {
         font-size: 1.4rem;
         font-weight: 400; 
-        color: $grey-opacity;       
-    }
-    &__title {
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-    }
-    &__box-desc {
+        color: $grey-opacity;
         margin-top: 0;
-        margin-bottom: 0;
-    }
+        margin-bottom: 0;   
+        @media (max-width: $r_400) {
+            font-size: 1.2rem;
+        }    
+    }      
 }
 .tabl-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;        
-        @media (max-width: $r_800) { 
-            grid-template-columns: 1fr 1fr 1fr;                        
-            width: auto;
-        }
+        grid-template-columns: 1fr 1fr 1fr 1fr; 
+        width: auto;        
     &__box {
         border: 1px solid rgba($grey, 1); 
         position: relative;
-        width: 285px;
+        max-width: 285px;
         height: 148px;
         box-sizing: border-box;
         transition: .3s; 
@@ -569,7 +799,11 @@ body {
         }
         @media (max-width: $r_900) {                        
             width: auto;
-        }          
+        }      
+        @media (max-width: $r_900) {                        
+            width: auto;
+            height: 44px;
+        }        
     }
     &__cover {
         position: absolute;
@@ -583,28 +817,52 @@ body {
         }
     }
     &__image1 {
-        width: 68px;        
+        width: 68px;
+        @media (max-width: $r_400) {                        
+            width: 22px;
+        }           
     }
     &__image2 {
         width: 68px;
+        @media (max-width: $r_400) {                        
+            width: 22px;
+        }     
     }
     &__image3 {
         width: 71px;
+        @media (max-width: $r_400) {                        
+            width: 22px;
+        }     
     }
     &__image4 {
         width: 73px;
+        @media (max-width: $r_400) {                        
+            width: 24px;
+        }     
     }
     &__image5 {
         width: 71px;
+        @media (max-width: $r_400) {                        
+            width: 24px;
+        }     
     }
     &__image6 {
         width: 101px;
+        @media (max-width: $r_400) {                        
+            width: 30px;
+        }     
     }
     &__image7 {
         width: 81px;
+        @media (max-width: $r_400) {                        
+            width: 24px;
+        }     
     }
     &__image8 {
         width: 74px;
+        @media (max-width: $r_400) {                        
+            width: 22px;
+        }     
     }
 }
 .price {
@@ -613,7 +871,12 @@ body {
         height: 140px;
         position: absolute; 
         top: 13rem;    
-        left: -5em;   
+        left: -5em;  
+        z-index: -1;
+        @media (max-width: $r_400) {  
+            top: 2rem;
+            left: -6em;
+        }
     }
     &__box {
         position: relative;
@@ -623,7 +886,11 @@ body {
         align-content: stretch;
         justify-content: space-between;
         margin-bottom: 7rem; 
-        
+        @media (max-width: $r_400) {                        
+            padding-top:6rem;
+            flex-direction: column; 
+            margin-bottom: 1rem;           
+        }     
     }
     &__title {   
         display: block;     
@@ -638,12 +905,24 @@ body {
         @media (max-width: $r_900) {                        
             width: 66rem;;
         } 
+        @media (max-width: $r_400) {                        
+           font-size: 1.8rem;
+           
+        }     
     }
     &__description {
         font-size: 2.8rem;
         line-height: 150%;
         margin-top: 10px;
         margin-bottom: 0.5rem;
+        @media (max-width: $r_400) {                        
+            margin-top: 0.5rem;
+            font-size: 1.6rem;
+        }     
+    }
+    &__line {
+        margin-top: 2rem;
+        margin-bottom: 3.5rem;
     }
     &__desc {
         display: flex;
@@ -668,25 +947,51 @@ body {
     &__wraper {
         display: grid;
         grid-template-columns: 51% 1fr;
-        margin-bottom: 7rem; 
+        margin-bottom: 7rem;  
+        @media (max-width: $r_400) {                        
+            margin-bottom: 2rem;
+            
+        }          
     }
     &__title {
         display: block;
         font-weight: 400;
         line-height: 150%;
-        
+        @media (max-width: $r_400) {                        
+            font-size: 1.6rem;
+            width: 12rem;
+            
+        }   
     }
     &__desc-s {
         font-size: 1.6rem;
         font-weight: 400;
         color: $grey-opacity;
+        @media (max-width: $r_400) {                        
+            font-size: 1rem;
+            width: 10rem;
+            line-height: 155%;
+            margin-top: 2rem;
+        }   
+    }
+    &__desc {
+        @media (max-width: $r_400) { 
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            gap: 1rem;
+        }
     }
     &__list {
         padding-left: 1.65rem;
         font-size: 1.6rem;
         font-weight: 400;
         line-height: 190%; 
-        color: $grey-opacity;       
+        color: $grey-opacity;
+        @media (max-width: $r_400) { 
+            margin-top: 2rem;
+            font-size: 1.1rem;
+            line-height: 220%;
+        }
     }
     &__price {
         position: relative;
@@ -695,12 +1000,21 @@ body {
         margin-top: 6rem;
         margin-bottom: 1.4rem;
         z-index: 3;
+        @media (max-width: $r_400) { 
+            margin-top: 3.5rem;
+            font-size: 2.1rem;
+            
+        }
     }
     &__right {
         position: relative;
         h4 {
             font-size: 1.6rem;
-            margin-top: 2.8rem;            
+            margin-top: 2.8rem;
+            @media (max-width: $r_400) { 
+                margin-top: 0rem;
+                font-size: 1.2rem;                
+            }            
         }
     }
     &__circle1 {
@@ -709,7 +1023,16 @@ body {
         width: 90px;
         top: 18.8rem;
         left: -4.5rem;
-        z-index: 1;
+        z-index: -1;
+        @media (max-width: $r_400) {
+            height: 40px;
+            width: 40px;                        
+            top: 14.8rem;
+            left: -2.5rem;
+        }     
+    }
+    &__line {
+
     }
 }
 .contact {
@@ -776,6 +1099,11 @@ body {
         font-size: 1.6rem;
         font-weight: 400;
         z-index: 9;
+        padding-bottom: 1rem;
+        @media (max-width: $r_900) {                        
+            font-size: 1.4;
+            gap: 2rem;
+        } 
     }
     &__link {
         text-decoration: none;
@@ -817,7 +1145,7 @@ body {
     font-size: 1.2rem;
     color: $grey-opacity;
     @media (max-width: $r_900) {                        
-        width: 50rem;
+        width: 45rem;
     } 
 .label {
         margin-bottom: 3rem;  
@@ -866,7 +1194,7 @@ body {
         appearance: none;/* убираем дефолнтные стрелочки */
         font-family: inherit;/* наследует от родителя */ 
         @media (max-width: $r_900) {                        
-            width: 50rem;
+            width: 45rem;
         } 
     }
     &__option {
@@ -932,6 +1260,9 @@ body {
         align-items: center;                
         margin: 0;
         padding-left: 0;
+        @media (max-width: $r_900) {                        
+            gap: 2rem;
+        } 
     }   
     &__link {
         text-decoration: none;
@@ -946,6 +1277,9 @@ body {
         display: flex;        
         align-items: center;
         gap: 2.6rem;
+        @media (max-width: $r_900) {                        
+            gap: 2rem;
+        } 
     }
     &__tel {
         text-decoration: none;
